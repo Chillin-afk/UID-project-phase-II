@@ -1,0 +1,161 @@
+body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease forwards;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+
+    .data, .section {
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      max-width: 700px;
+      animation: fadeInUp 1.2s ease forwards;
+      margin: 0 auto 40px auto;
+      backdrop-filter: blur(8px);
+      line-height: 1.6;
+    }
+
+    .data p {
+      font-size: 1.25rem;
+      position: relative;
+      padding-left: 40px;
+      animation: float 3s ease-in-out infinite alternate;
+    }
+
+    .data p::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .data p:nth-child(1)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/869/869869.png');
+      animation: sunMove 5s linear infinite;
+    }
+    .data p:nth-child(2)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/414/414974.png');
+      animation: cloudMove 8s linear infinite;
+    }
+    .data p:nth-child(3)::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/3313/3313881.png');
+      animation: rainMove 2s linear infinite;
+    }
+
+    .section img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px auto 15px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
+    }
+    .section img:hover {
+      transform: scale(1.05);
+    }
+
+    a.back {
+      display: inline-block;
+      text-decoration: none;
+      background: #1976d2;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(25, 118, 210, 0.5);
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+      animation: fadeIn 2s ease forwards;
+      margin: 0 auto 50px auto;
+      max-width: 700px;
+      text-align: center;
+      display: block;
+    }
+	.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+    a.back:hover {
+      background-color: #0d47a1;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+    @keyframes sunMove {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(6px) translateY(-3px) rotate(15deg);}
+      100% { transform: translateX(0); }
+    }
+    @keyframes cloudMove {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(8px) translateY(2px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes rainMove {
+      0% { transform: translateY(0); opacity: 1;}
+      50% { transform: translateY(4px); opacity: 0.7;}
+      100% { transform: translateY(0); opacity: 1;}
+    }
+  </style>
